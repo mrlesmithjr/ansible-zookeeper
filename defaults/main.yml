@@ -1,0 +1,7 @@
+---
+# defaults file for ansible-zookeeper
+cloudera_hadoop_version: cdh5
+zookeeper_debian_repo_key: 'https://archive.cloudera.com/{{ cloudera_hadoop_version }}/{{ ansible_distribution|lower }}/{{ ansible_distribution_release }}/amd64/cdh/archive.key'
+zookeeper_debian_repos:
+  - 'deb [arch=amd64] http://archive.cloudera.com/{{ cloudera_hadoop_version }}/{{ ansible_distribution|lower }}/{{ ansible_distribution_release }}/amd64/cdh {{ ansible_distribution_release }}-{{ cloudera_hadoop_version }} contrib'
+  - 'deb-src http://archive.cloudera.com/{{ cloudera_hadoop_version }}/{{ ansible_distribution|lower }}/{{ ansible_distribution_release }}/amd64/cdh {{ ansible_distribution_release }}-{{ cloudera_hadoop_version }} contrib'
