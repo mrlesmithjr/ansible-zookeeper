@@ -5,3 +5,6 @@
 
 - include: centos.yml
   when: ansible_os_family == "RedHat"
+
+- include: config_zookeeper.yml
+  when: inventory_hostname in groups[zookeeper_cluster_master_group]
